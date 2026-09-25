@@ -25,10 +25,10 @@ export const DEMO_LOGOS: DemoLogo[] = [
     alt: ["Dabur India"],
   },
   {
-    filename: "Drem 11.png",
-    url: "/logos/Drem%2011.png",
-    answer: "Drem 11",
-    alt: ["Dream 11", "Dream11", "Drem11", "Dream Eleven"],
+    filename: "Dream 11.png",
+    url: "/logos/Dream%2011.png",
+    answer: "Dream 11",
+    alt: ["Dream 11", "Dream11", "Drem11", "Drem 11", "Dream Eleven"],
   },
   {
     filename: "Eicher.png",
