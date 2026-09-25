@@ -21,8 +21,8 @@ export default function Navbar() {
             <Sparkles size={20} className="text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="font-outfit font-black text-xl tracking-tight text-white group-hover:text-brand transition-colors">
-              FUN FRIDAY <span className="text-brand">GAMES</span>
+            <span className="font-outfit font-black text-lg sm:text-xl tracking-tight text-white group-hover:text-brand transition-colors">
+              FUN FRIDAY <span className="text-brand">GAMES <span className="hidden sm:inline">BY NIKITA</span></span>
             </span>
           </div>
         </Link>

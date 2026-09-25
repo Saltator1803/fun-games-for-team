@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Sparkles, Gamepad2, Play, Users, Trophy, Zap, ArrowRight, ShieldCheck } from "lucide-react";
+import { Sparkles, Gamepad2, Play, Users, Trophy, Zap, ArrowRight, ShieldCheck, ExternalLink } from "lucide-react";
 
 export default function Home() {
   const router = useRouter();
@@ -36,8 +36,9 @@ export default function Home() {
           <span>Your Friday. Your Games. Your Squad.</span>
         </div>
 
-        <h1 className="text-5xl sm:text-7xl md:text-8xl font-black font-outfit tracking-tight leading-none mb-4 bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent drop-shadow-sm">
-          FUN FRIDAY <span className="text-brand">GAMES</span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-outfit tracking-tight leading-none mb-4 bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent drop-shadow-sm">
+          FUN FRIDAY
+          <span className="block text-brand mt-1 sm:mt-2">GAMES BY NIKITA</span>
         </h1>
 
         <p className="text-2xl sm:text-3xl font-extrabold text-white mb-3 font-outfit">
@@ -72,7 +73,7 @@ export default function Home() {
       </motion.section>
 
       {/* CHOOSE YOUR GAME Section */}
-      <section className="w-full max-w-5xl z-10 mx-auto pb-16">
+      <section className="w-full max-w-6xl z-10 mx-auto pb-16">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
           <div>
             <h2 className="text-3xl sm:text-4xl font-black font-outfit tracking-tight">
@@ -92,7 +93,7 @@ export default function Home() {
         </div>
 
         {/* Game Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* GAME CARD 1: Guess the Logo */}
           <motion.div
             whileHover={{ y: -6 }}
@@ -190,6 +191,57 @@ export default function Home() {
                   Info
                 </button>
               </Link>
+            </div>
+          </motion.div>
+
+          {/* GAME CARD 3: Skribbl (External Game) */}
+          <motion.div
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.2 }}
+            className="glass rounded-3xl p-6 sm:p-8 border border-gray-800 flex flex-col justify-between relative overflow-hidden group hover:border-sky-500/50 transition-all shadow-xl md:col-span-2 lg:col-span-1 md:max-w-md md:w-full md:mx-auto lg:max-w-none"
+          >
+            <div className="absolute top-0 right-0 w-36 h-36 bg-sky-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-sky-500/20 transition-all" />
+
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-4xl">✏️</span>
+                <span className="text-xs font-bold uppercase tracking-wider bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full border border-sky-500/30">
+                  External Game
+                </span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-black font-outfit text-white mb-2">
+                Skribbl
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base mb-6 font-medium">
+                "Draw, guess, and compete with your squad."
+              </p>
+
+              <div className="grid grid-cols-2 gap-3 text-xs font-medium text-gray-400 mb-8">
+                <div className="bg-gray-900/60 p-2.5 rounded-xl border border-gray-800 flex items-center gap-2">
+                  <Users size={16} className="text-sky-400 shrink-0" />
+                  <span>Multiplayer</span>
+                </div>
+                <div className="bg-gray-900/60 p-2.5 rounded-xl border border-gray-800 flex items-center gap-2">
+                  <Zap size={16} className="text-cyan-400 shrink-0" />
+                  <span>Drawing Game</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <a
+                href="https://skribbl.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <button className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-extrabold py-4 px-6 rounded-2xl transition-all shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 text-base cursor-pointer">
+                  <Play size={18} />
+                  <span>PLAY SKRIBBL</span>
+                  <ExternalLink size={16} className="opacity-80 ml-1" />
+                </button>
+              </a>
             </div>
           </motion.div>
         </div>

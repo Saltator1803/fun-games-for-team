@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  title: "FUN FRIDAY GAMES | Your Friday. Your Games. Your Squad.",
+  title: "FUN FRIDAY GAMES BY NIKITA | Your Friday. Your Games. Your Squad.",
   description: "Play fast, competitive party multiplayer games with your friends, teammates, or colleagues.",
 };
 
